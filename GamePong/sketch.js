@@ -55,7 +55,7 @@ function draw() {
   verificaColisaoRaq(xraqop,yraqop); 
   incluiPlacar();
   marcaPonto();
- 
+  bolinhaNaoFicaPresa(); 
 }
 
 function mostraBolinha (){
@@ -145,5 +145,12 @@ function marcaPonto(){
     ptsop += 1; 
     ponto.play();
   }
+}
+
+//Bug 
+function bolinhaNaoFicaPresa(){
+    if (XBolinha - raio < 0){
+    XBolinha = 23
+    }
 }
 
